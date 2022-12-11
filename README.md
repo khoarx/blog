@@ -2,8 +2,7 @@
 My personal blog
 
 ## Requirements
-In able to compile and run project, make sure `go 1.18` or later is installed.
-You might need to install `hugo` as well, check out their documentation.
+In able to compile and run project, make sure `zola` is installed, check out their documentation.
 
 Clone repository by `git clone` to your local computer:
 ```shell script
@@ -12,27 +11,18 @@ $ cd blog
 ```
 
 ## Build and test
-Start Hugo's development server to view site
+Start Zola's development server to view site
 ```shell script
-$ hugo server
-```
-for draft content
-```shell script
-$ hugo server -D
+$ zola serve
 ```
 
-Add new page to site
+To use another theme for your site, add theme repo to _themes_ folder
 ```shell script
-$ hugo new [folder]/[page-name].md
+git submodule add [theme_repo_url] themes/[theme_name]
 ```
-For example:
-```shell script
-$ hugo new posts/fluffy-otter.md
-```
-
-To publish the site, simply execute `hugo` and the entire static site in the _public/_ directory.
+then modify setting in `config.toml`
 
 ## References
-[HUGO](https://gohugo.io/) \
+[Zola](https://www.getzola.org/) \
 [The Markdown Guide](https://www.markdownguide.org/)
 
